@@ -216,10 +216,8 @@ module Spreedly
     def update_gateway_body(gateway_token, credentials)
       build_xml_request('gateway') do |doc|
         doc.token gateway_token
-        doc.credentials do |doc|
-          credentials.each do |key, val|
-            doc.send(key, val)
-          end
+        credentials.each do |key, val|
+          doc.send(key, val)
         end
       end
     end

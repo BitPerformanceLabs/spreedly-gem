@@ -25,7 +25,7 @@ class UpdateGatewayTest < Test::Unit::TestCase
     gateway = body.xpath('./gateway')
 
     assert_xpaths_in gateway,
-      [ './credentials/login', 'newlogin' ],
-      [ './credentials/password', 'newpassword' ]
+      [ './login', 'newlogin' ],
+      [ './password', 'newpassword' ]
   end
 end
